@@ -13,18 +13,16 @@ function mergeTwoSortedArray(arr1, arr2) {
     if(arr2Length !=0 && arr1Length ==0)
         return arr2
 
-    for( ;i<arr1Length&&k<arr2Length; ){
+    while(i<arr1Length&&k<arr2Length){
         if(arr1[i] < arr2[k]){
             arr3[j]=arr1[i]
             ++i
             ++j
-            continue
         }
         if(arr1[i] > arr2[k]){
             arr3[j]=arr2[k]
             ++k
             ++j
-            continue
         }
         if(arr1[i] == arr2[k]){
             arr3[j] = arr1[i]
@@ -33,7 +31,6 @@ function mergeTwoSortedArray(arr1, arr2) {
             arr3[j] = arr2[k]
             ++j
             ++k
-            continue
         }
     }
     if(arr1[arr1Length-1] > arr2[arr2Length-1])
